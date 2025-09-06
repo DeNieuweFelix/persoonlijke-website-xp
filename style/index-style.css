@@ -192,3 +192,62 @@ button, a{
 #SMLB:hover{
     filter: brightness(80%);
 }
+#ZS-editor{
+    width: 50vw;
+    height: 50vh;
+    background-color: rgb(8, 8, 8);
+    position: absolute;
+    top: 20vh;
+    left: 30vw;
+    display: flex;
+    flex-direction: column;
+}
+#ZS-header{
+    color: white;
+    width: 100%;
+    height: 3vh;
+    background-color: rgb(14, 14, 14);
+    display: flex;
+    align-items: center;
+}
+#ZS-header p{
+    padding-left: 2vw;
+}
+#ZS-header img{
+    width: 1vw;
+    height: 1vw;
+    image-rendering: pixelated;
+    padding-left: 1vw;
+}
+#ZS-main textarea{
+    resize: none;
+    width: 99.7%;
+    height: 30vh;
+    background-color: black;
+    color: white;
+    border: none;
+}
+#ZS-main textarea:focus{
+    outline: 0;
+}
+#ZS-main textarea::selection{
+    background-color: orange;
+    color: black;
+}
+#ZS-output{
+    width: 100%;
+    height: 10vh;
+    background-color: black;
+    margin-top: auto;
+}
+#ZSp-output{
+    color: white;
+}
+.ZSerror{
+    color: red;
+    font-weight: bold;
+}
+.ZSfinish{
+    color: peru;
+    font-weight: bold;
+}

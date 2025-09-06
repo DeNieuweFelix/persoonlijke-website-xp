@@ -9,6 +9,10 @@
     <script src="lib/clickSound.js" defer></script>
     <script src="lib/desktopControls.js" defer></script>
     <script type="module" src="lib/createDesktop.js"></script>
+
+    <!-- ZS-code -->
+     <script src="lib/ZybrovScript/runCode.js" defer></script>
+     <script src="lib/ZybrovScript/ZSeditor.js" defer></script>
 </head>
 <body>
     <main>
@@ -45,6 +49,26 @@
             <div id="SMLB">
                 <img src="img/icons/shut-off.png">
                 <p>- Shut off</p>
+            </div>
+        </div>
+
+        <!-- zybrov-script editor -->
+        <div id="ZS-editor">
+            <div id="ZS-header">
+                <img src="img/app-icons/zybrov-script.png">
+                <p>ZybrovScript Editor 0.0.1</p>
+            </div>
+            <div id="ZS-main">
+                <textarea id="ZS-input"></textarea>
+            </div>
+            <div id="ZS-options">
+                <button id="ZS-runButton">Run Code</button>
+                <button>Clear Code</button>
+                <button>Debug Code</button>
+                <button>Open Documentation</button>
+            </div>
+            <div id="ZS-output">
+                <p id="ZSp-output"></p>
             </div>
         </div>
     </div>
