@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     font-family: Tahoma;
+    user-select: none;
 }
 body{
     background-image: url("../img/background.png");
@@ -89,14 +90,105 @@ button, a{
     position: absolute;
     right: 0;
     top: 0;
-    background-color: gray;
+    background-color: rgb(182, 182, 182);
     height: fit-content;
     width: fit-content;
     display: flex;
     flex-direction: column;
-    padding-left: 0.5vw;
-    padding-right: 1vw;
+    /* padding-top: 0.5vh;
+    padding-bottom: 0.5vh; */
+    display: none;
+}
+#contextMenu a{
+    background-color: rgb(182, 182, 182);
+    border: inset;
+    width: 100%;
+    padding-top: 0.1vh;
+    padding-bottom: 0.1vh;
+    padding-left: 1vh;
+    padding-right: 1vh;
+}
+#contextMenu a:hover{
+    background-color: gray;
+}
+#desktop{
+    height: 92.5vh;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+#startMenu{
+    position: absolute;
+    left: 0;
+    bottom: 7.5vh;
+    height: 40vh;
+    width: 15vw;
+    background-image: linear-gradient(rgb(75, 64, 240), blue, darkblue);
+    display: flex;
+    flex-direction: column;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+#SMUB{
+    width: 100%;
+    height: fit-content;
+    background-image: linear-gradient(rgb(75, 64, 240), blue, darkblue);
     padding-top: 1vh;
     padding-bottom: 2vh;
-    display: none;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    display: flex;
+    align-content: center;
+}
+#SMUB h2{
+    color: white;
+    padding-left: 1vw;
+}
+#SMAPP{
+    padding-top: 1vh;
+    background-color: rgb(209, 209, 209);
+}
+.startApps{
+    width: 93.3%;
+    height: 5vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 1vw;
+    padding-bottom: 0.5vh;
+    background-color: white;
+    border-bottom: 2px rgb(216, 216, 216) solid;
+}
+.startApps:hover{
+    background-color: rgb(219, 219, 219);
+}
+.startApps img{
+    image-rendering: pixelated;
+    padding-right: 1vw;
+}
+#SMLB{
+    background-image: linear-gradient(rgb(75, 64, 240), blue, darkblue);
+    height: 5vh;
+    width: 100%;
+    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+#SMLB img{
+    image-rendering: pixelated;
+    width: 1.5vw; height: 1.5vw;
+    margin-right: 0.5vw;
+    padding-left: 1vw;
+}
+#SMLB p{
+    color: white;
+    font-weight: bold;
+    font-family: Tahoma;
+    font-size: large;
+}
+#SMLB:hover{
+    filter: brightness(80%);
 }
