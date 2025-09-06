@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Felix' Website!</title>
+    <link rel="stylesheet" href="style/index-style.css">
+    
+    <script src="lib/clock.js" defer></script>
+    <script src="lib/clickSound.js" defer></script>
+    <script src="lib/desktopControls.js" defer></script>
+    <script type="module" src="lib/createDesktop.js"></script>
+</head>
+<body>
+    <main>
+        <audio autoplay hidden loop src="sounds/main/background-sound.mp3"></audio>
+        <div id="desktop">
+
+        </div>    
+        <div id="lowerBar">
+            <div id="buttonHolder">
+                <button>[:3] Start</button>
+            </div>
+            <div id="sidebarBottom">
+                <a class="botSidBut"><img src="img/icons/speaker-icon.png"></a>
+                <a class="botSidBut"><img src="img/icons/cable.png"></a>
+                <a class="botSidBut"><img src="img/icons/defender.png"></a>
+                <a id="bottomClock">19:30</a>
+            </div>
+        </div>
+    </main>
+    <!-- windows etc -->
+    <div>
+        <div id="contextMenu">
+            <a>option 1</a>
+            <a>option 2</a>
+            <a>option 3</a>
+        </div>
+    </div>
+</body>
+</html>

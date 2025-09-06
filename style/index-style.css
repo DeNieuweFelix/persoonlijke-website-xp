@@ -1,0 +1,102 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Tahoma;
+}
+body{
+    background-image: url("../img/background.png");
+    image-rendering: pixelated;
+    background-size: cover;
+    cursor: url("../img/cursors/default_arrow.cur"), pointer;
+}
+button, a{
+    cursor: url("../img/cursors/default_link.cur"), pointer;
+}
+#lowerBar{
+    height: 7.5vh;
+    width: 100vw;
+    background-image: linear-gradient(rgb(120, 112, 228), blue, darkblue);
+    position: absolute;
+    bottom: 0;
+}
+#buttonHolder{
+    width: 10vw;
+    height: 100%;
+}
+#buttonHolder button{
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(lightgreen , green, darkgreen);
+    border: none;
+    font-size: x-large;
+    color: white;
+    font-weight: bold;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    transition: 100ms;
+}
+#buttonHolder button:hover{
+    filter: brightness(80%);
+}
+#sidebarBottom{
+    height: 100%;
+    width: 15vw;
+    background-image: linear-gradient(#58c5ff, #0491f2, rgb(0, 110, 201));
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+#bottomClock{
+    font-size: 3vh;
+    width: fit-content;
+    color: white;
+    font-weight: lighter;
+    justify-content: flex-start;
+    padding-right: 2vw;
+}
+.botSidBut{
+    width: 20%;
+    height: 100%;
+    image-rendering: pixelated;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.botSidBut img{
+    width: 70%;
+    height: auto;
+}
+.desktopApp{
+    width: 4vw;
+    height: 4vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    user-select: none;
+    text-align: center;
+    border-radius: 5px;
+}
+.desktopApp:hover{
+    background-color: rgba(194, 194, 194, 0.514);
+}
+#contextMenu{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: gray;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0.5vw;
+    padding-right: 1vw;
+    padding-top: 1vh;
+    padding-bottom: 2vh;
+    display: none;
+}
