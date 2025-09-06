@@ -239,6 +239,7 @@ button, a{
     height: 10vh;
     background-color: black;
     margin-top: auto;
+    overflow-y: scroll;
 }
 #ZSp-output{
     color: white;

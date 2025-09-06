@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>ZybrovScript Official Documentation!</title>
+    <link rel="stylesheet" href="style/docZS-style.css">
+</head>
+<body>
+    <header>
+        <div>
+            <img src="img/app-icons/zybrov-script.png">
+            <h1>ZybrovScript Official Docs!</h1>
+        </div>
+    </header>
+    <main>
+        <div class="docSection">
+            <h1>Intro:</h1>
+            <p>ZybrovScript was made VERY quickly and poorly, and sucks at a lot of things, You can only use 3 variables of each type, which adds some extra challenge
+                <br>
+                ZybrovScript is made 100% in JavaScript without any libraries or frameworks, and the source code can be found on: https://github.com/DeNieuweFelix/persoonlijke-website-xp (yes, it's fully open source!!!)
+            </p>
+        </div>
+        <div class="docSection">
+            <h1>Variables:</h1>
+            <p>ZybrovScript only has 3 variables of each type (int, string, boolean), these variables can be changed whenever you want.</p>
+            <h3>Integers:</h3>
+            <p>ZybrovScript can handle integers up to 9007199254740991 (the max safe JavaScript limit), I don't know what happens when you use number bigger than 9007199254740991, and to be honest, i'm too lazy to try. 
+                <br>
+                The 3 available integers-variables are: int0, int1 and int2
+            </p>
+            <div class="code">
+                <p class="comment">&lt;&lt;1: setting the value of an integer:&gt;&gt;~</p>
+                <p>SetVar([any of the integer variables]) [value]~</p>
+                <br>
+                <p class="comment">&lt;&lt;2: The value of int1 is set to 100&gt;&gt;~</p>
+                <p>SetVar(int1) 100~</p>
+                <p>LogVar(int1)~</p>
+                <p class="comment">&lt;&lt;3: Output will be 100&gt;&gt;~</p>
+                <br>
+                <p>SetVar(int0) 123~</p>
+                <p>SetVar(int0) 67~</p>
+                <p class="comment">&lt;&lt;4: 123 becomes 67&gt;&gt;~</p>
+                <p>LogVar(int0)~</p>
+                <p class="comment">&lt;&lt;5: Output will be 67&gt;&gt;~</p>
+                <br>
+                <p class="comment">&lt;&lt;6: Integer variables can also be negative&gt;&gt;~</p>
+                <p>SetVar(int2) -100~</p>
+                <p>LogVar(int2)~</p>
+                <p class="comment">&lt;&lt;7: Output will be -100&gt;&gt;~</p>
+            </div>
+            <h3>Strings:</h3>
+            <p>Strings are used to store text (just like in JavaScript, or really any (modern) programming language), you can also store integers in [str] variables, but you won't be able to do math with them
+                <br>
+                Unfortunately, you're not able to use spaces without using other functions to replace certain symbols with spaces (STRrep())
+                <br>
+                The 3 available string-variables are: str0, str1 and str2
+            </p>
+            <div class="code">
+                <p class="comment">&lt;&lt;1: ZybrovScript strings can be set without using ""&gt;&gt;~</p>
+                <p>SetVar(str0) hello-world~</p>
+                <p>LogVar(str0)~</p>
+                <p class="comment">&lt;&lt;2: Output will be "hello-world"&gt;&gt;~</p>
+                <br>
+                <p>SetVar(str1) hello~</p>
+                <p>SetVar(str2) world~</p>
+                <p>LogVar(str1)~</p>
+                <p>LogVar(str2)~</p>
+                <p class="comment">&lt;&lt;3: Output will be "hello" and "world"&gt;&gt;~</p>
+            </div>
+            <h3>Booleans:</h3>
+            <p>Booleans (bools) are used to store either true or false, you can't store integers or strings in a boolean variable. Bools are used to compare values
+                <br>
+                Booleans also cannot be combined using the CombVar() function!
+                <br>
+                The 3 available boolean-variables are: bool0, bool1 and bool 2
+            </p>
+            <div class="code">
+                <p>SetVar(bool1) true~</p>
+                <p>LogVar(bool1)~</p>
+                <p class="comment">&lt;&lt;1: Output will be true&gt;&gt;~</p>
+                <br>
+                <p>SetVar(bool0) 12345~</p>
+                <p>SetVar(bool1) hello-world~</p>
+                <p>SetVar(bool2) true~</p>
+                <br>
+                <p>LogVar(bool0)~</p>
+                <p>LogVar(bool1)~</p>
+                <p>LogVar(bool2)~</p>
+                <p class="comment">&lt;&lt;2: Nothing will be output, because wrong data types are used&gt;&gt;~</p>
+            </div>
+            <h1>Functions:</h1>
+            <h3>Comments:</h3>
+            <p>I'm gonna be honest with you, comments aren't really ""functions"", but I had to put them somewhere lol 
+                <br>
+                Comments are used to add notes between code, and will be ignored.
+            </p>
+            <div class="code">
+                <p>SetVar(str0) meow~</p>
+                <p class="comment">&lt;&lt;SetVar(str0) meowmeow~&gt;&gt;~</p>
+                <br>
+                <p>LogVar(str0)~</p>
+                <p class="comment">&lt;&lt;1: The comment will be ignored, so the output is "meow" (and not "meowmeow")&gt;&gt;~</p>
+                <br>
+                <p class="comment">&lt;&lt;SetVar(int1) 100~&gt;&gt;~</p>
+                <p class="comment">&lt;&lt;SetVar(int2) 500~&gt;&gt;~</p>
+                <p>LogVar(int1)~</p>
+                <p class="comment">&lt;&lt;2: Output will be 0 (default integer value)&gt;&gt;~</p>
+            </div>
+            <h3>SetVar()~</h3>
+            <p>SetVar is used to assign a value to one of the variables, the correct syntax is: SetVar([variable]) [value]~ where variable is one of the variables, and value is the value you want to assign.</p>
+            <div class="code">
+                <p>SetVar(int0) 500~</p>
+                <p class="comment">&lt;&lt;500 will be saved to int0&gt;&gt;~</p>
+                <br>
+                <p>SetVar(str1) hello-world~</p>
+                <p class="comment">&lt;&lt;"hello-world" will be saved to str1&gt;&gt;~</p>
+                <br>
+                <p>SetVar(bool2) true~</p>
+                <p class="comment">&lt;&lt;true will be saved to bool2&gt;&gt;~</p>
+            </div>
+            <h3>ClearVar()~</h3>
+            <p>ClearVar is used to reset (or clear) a variable. (0 for integers, "" for strings and false for booleans) the correct syntax is: ClearVar([variable])~</p>
+            <div class="code">
+                <p class="comment">&lt;&lt;assigning values:&gt;&gt;~</p>
+                <p>SetVar(str1) meow~</p>
+                <p>SetVar(str2) woof~</p>
+                <br>
+                <p class="comment">&lt;&lt;str2 will be cleared&gt;&gt;~</p>
+                <p>ClearVar(str2)~</p>
+                <br>
+                <p>LogVar(str1)~</p>
+                <p>LogVar(str2)~</p>
+                <p class="comment">&lt;&lt;Output will be "meow" and "" (default string value)&gt;&gt;~</p>
+                <br>
+                <p>SetVar(int0) 150~</p>
+                <p>ClearVar(int0)~</p>
+                <br>
+                <p>LogVar(int0)~</p>
+                <p class="comment">&lt;&lt;Output will be 0 (default integer value)&gt;&gt;~</p>
+                <br>
+                <p>SetVar(bool0)~</p>
+                <p>ClearVar(bool0)~</p>
+                <br>
+                <p>LogVar(bool0)~</p>
+                <p class="comment">&lt;&lt;Output will be false (default boolean value)&gt;&gt;~</p>
+            </div>
+            <h3>LogVar()~</h3>
+            <p>The LogVar()~ function is used to output the value of variables to the console. The correct syntax is: LogVar([variable])~ LogVar()~ can be used on any data type</p>
+            <div class="code">
+                <p>SetVar(int1) 500~</p>
+                <p>LogVar(int1)~</p>
+                <p class="comment">&lt;&lt;Output will be 500&gt;&gt;~</p>
+                <br>
+                <p>SetVar(str0) boooo~</p>
+                <p>LogVar(str0)~</p>
+                <p class="comment">&lt;&lt;Output will be "boooo"&gt;&gt;~</p>
+                <br>
+                <p>SetVar(bool2) true~</p>
+                <p>LogVar(bool2)~</p>
+                <p class="comment">&lt;&lt;Output will be true&gt;&gt;~</p>
+                <br>
+                
+            </div>
+        </div>
+
+    </main>
+</body>
+</html>
